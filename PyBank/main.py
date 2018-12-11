@@ -8,8 +8,7 @@ oldrevenue = 0
 revenuechanges = []
 
 #Open file - if time permits, relative path?
-#file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyBank/budget_data.csv'
-file = os.path.join('PyBank/budget_data.csv')
+file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyBank/budget_data.csv'
 
 with open(file) as csvfile:
     csvreader= csv.reader(csvfile, delimiter=',')
