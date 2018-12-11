@@ -7,7 +7,7 @@ winnervotes = 0
 candidates = {}
 candidatepercent = {}
 
-#Open file - if time permits, relative path?
+#Open file
 file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyPoll/election_data.csv'
 
 with open(file) as csvfile:
@@ -35,7 +35,7 @@ for candidate in candidates:
         winner = candidate
         winnervotes = candidates[candidate]
  
-#Open in text file and terminal - change to relative path?
+#Open in text file and terminal
 outputfile = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyPoll/output.txt'
 
 with open(outputfile, 'w') as writefile:
