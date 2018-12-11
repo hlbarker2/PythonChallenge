@@ -19,7 +19,7 @@ with open(file) as csvfile:
     for row in csvreader:
         totalvotes = totalvotes + 1
 
-#A complete list of candidates who received votes, and the total number of votes each candidate won - votes per candidate
+#A complete list of candidates who received votes, and the total number of votes each candidate won
         if row[2] in candidates.keys():
             candidates[row[2]] = candidates[row[2]] + 1
         else:

@@ -7,7 +7,7 @@ revenue=[]
 oldrevenue = 0
 revenuechanges = []
 
-#Open file - if time permits, relative path?
+#Open file
 file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyBank/budget_data.csv'
 
 with open(file) as csvfile:
@@ -46,7 +46,7 @@ for item in range(len(revenuechanges)):
         greatestdecrease = revenuechanges[item]
         greatestdecreasemonth = months[item]
 
-#Open in text file and terminal - change to relative path?
+#Open in text file and terminal
 outputfile = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyBank/output.txt'
 
 with open(outputfile, 'w') as writefile:
