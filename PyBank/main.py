@@ -1,4 +1,3 @@
-import os
 import csv
 
 #Create lists to store month and revenue data
@@ -7,7 +6,7 @@ revenue=[]
 oldrevenue = 0
 revenuechanges = []
 
-#Open file
+#Open file with absolute path
 file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyBank/budget_data.csv'
 
 with open(file) as csvfile:
@@ -34,10 +33,11 @@ with open(file) as csvfile:
 #The total net amount of "Profit/Losses" over the entire period
     totalrevenue = sum(revenue)
 
-#The greatest increase in profits and decrease in losses (date and amount) (date and amount) over the entire period
+#The greatest increase in profits and decrease in losses (date and amount) over the entire period
 greatestincrease = revenuechanges[0]
 greatestdecrease = revenuechanges[0]
 
+#Loop through indices to determine values for greatest increase and decrease
 for item in range(len(revenuechanges)):
     if revenuechanges[item] >= greatestincrease:
         greatestincrease = revenuechanges[item]

@@ -1,13 +1,12 @@
-import os
 import csv
 
-#Define variables and create dictionaries
+#Define variables and create dictionaries to store candidate data
 totalvotes = 0
 winnervotes = 0
 candidates = {}
 candidatepercent = {}
 
-#Open file
+#Open file with absolute path
 file = '/Users/hannah/Desktop/BootCamp/Homework/pythonchallenge/PyPoll/election_data.csv'
 
 with open(file) as csvfile:
@@ -20,16 +19,19 @@ with open(file) as csvfile:
         totalvotes = totalvotes + 1
 
 #A complete list of candidates who received votes, and the total number of votes each candidate won
+#Continue to loop through each row of the file to locate each candidate and count respective votes
         if row[2] in candidates.keys():
             candidates[row[2]] = candidates[row[2]] + 1
         else:
             candidates[row[2]] = 1
 
 #The percentage of votes each candidate won
+#Loop through candidates dictionary key, value pairs, and store information in candidatepercent dictionary
 for candidate, votes in candidates.items():
     candidatepercent[candidate] = round((votes/totalvotes) * 100, 2)
 
-#The winner of the election based on popular vote.
+#The winner of the election based on popular vote
+#Loop through keys in candidates dictionary
 for candidate in candidates:
     if candidates[candidate] > winnervotes:
         winner = candidate
