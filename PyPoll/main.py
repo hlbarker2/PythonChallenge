@@ -28,7 +28,8 @@ with open(file) as csvfile:
 #The percentage of votes each candidate won
 #Loop through candidates dictionary key, value pairs, and store information in candidatepercent dictionary
 for candidate, votes in candidates.items():
-    candidatepercent[candidate] = round((votes/totalvotes) * 100, 2)
+    candidatepercent[candidate] = (votes/totalvotes) * 100
+    candidatepercent[candidate] = '{:.4f}'.format(candidatepercent[candidate])
 
 #The winner of the election based on popular vote
 #Loop through keys in candidates dictionary
